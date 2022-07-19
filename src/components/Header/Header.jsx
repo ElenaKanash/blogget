@@ -3,16 +3,19 @@ import Layout from '../Layout';
 import Logo from './Logo';
 import Search from './Search';
 import Auth from "./Auth";
+import Heading from './Heading';
 
 
 export const Header = () => {
   return (
-    <header>
+    <header className={style.header}>
       <Layout>
+        <div className={style.gridContainer}>
         <Logo/>
-        <h1>заголовок</h1>
+        <Heading text='Главная'/>
         <Search/>
-        <Auth/>
+        <Auth auth={false}/>
+        </div>
       </Layout>
     </header>
   )
